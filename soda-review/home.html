@@ -4,21 +4,34 @@
 <style>
 
 body {
-    background-color:black
+    font-family: "Comic Sans MS";
+    background-color: rgb(136, 135, 185);
 }
 
 #container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px
+    height: 300px;
+    background-color: rgb(136, 135, 185);
     }
 
 .box {
-    width: 300px;
-    margin: 5px;
+    width: 700px;
+    margin: auto;
     text-align: center;
+    background-color: rgb(172, 201, 191);
+    
+}
+
+.biggerbox {
+    width: 1000px;
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(164, 164, 211);
+    
 }
 
 </style>
@@ -32,13 +45,15 @@ body {
 <body>
 
     <div id="container"><!-- flex container -->
+        
+        <div class ="biggerbox">
+            <div class="box"><!-- flex item -->
+                <h1>SOPHIA'S SODA REVIEWS</h1>
+            </div>
 
-        <div class="box"><!-- flex item -->
-            <p>DIV #1</p>
-        </div>
-    
-        <div class="box"><!-- flex item -->
-            <p>DIV #2</p>
+            <div class="box"><!-- flex item -->
+                <h2>I drink it, so you don't have to!</h2>
+            </div>
         </div>
     
     </div>

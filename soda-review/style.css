@@ -1,0 +1,88 @@
+body {
+    background-image: url("images/shelf.jpg");
+    font-family: "Comic Sans MS";
+    background-color: rgb(136, 135, 185);
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 23px;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    }
+
+.box {
+    width: 900px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgb(93, 235, 215);
+    
+}
+
+.middlebox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 920px;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;
+    background-color: rgb(22, 121, 171);
+    
+}
+
+.biggerbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 1000px;
+    padding: 10px;
+    margin: 5px;
+    align-items: center;
+    background-color: white;
+    
+}
+
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+    width: 900px;
+    display: flex;
+    background-color: #1C1678;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #7BC9FF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #8576FF;
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #7BC9FF;
+    color: white;
+  }

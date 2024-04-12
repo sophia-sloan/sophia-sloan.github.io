@@ -1,9 +1,17 @@
+:root {
+    --teal: rgb(93, 235, 215);
+    --purple: #8576FF;
+    --lightblue: #7BC9FF;
+    --darkblue: #1C1678;
+    --midblue: rgb(22, 121, 171);
+  }
+
 body {
     background-image: url("images/shelf.jpg");
     font-family: "Comic Sans MS";
-    color: #1C1678;
+    color: var(--darkblue);
     
-    background-color: rgb(136, 135, 185);
+    background-color: var(--purple);
 }
 
 h1 {
@@ -36,7 +44,7 @@ p {
 .item_box {
     border-width:10px;
     border-style:solid;
-    border-color: #1C1678;
+    border-color: var(--darkblue);
 
     display: flex;
     flex-direction: column;
@@ -45,11 +53,11 @@ p {
 
     margin: 10px;
     padding: 10px;
-    background-color: #8576FF;
+    background-color: var(--midblue);
     width: 240px;
     height: 300px;
     text-align: center;
-    color:#7BC9FF;
+    color:var(--lightblue);
 
 }
 
@@ -60,7 +68,7 @@ p {
     justify-content: center;
     width: 900px;
     text-align: center;
-    background-color: rgb(93, 235, 215);
+    background-color: var(--teal);
     padding-bottom: 15px;
 }
 
@@ -69,17 +77,17 @@ p {
     flex-direction: column;
     justify-content: center;
     width: 900px;
-    margin: 10px;
+    margin: 0px;
     text-align: center;
-    background-color: rgb(93, 235, 215);
-    padding-bottom: 30px; 
+    background-color: var(--teal);
+    padding-bottom: 0px; 
 }
 
 .header_box {
     width: 900px;
     margin: 10px;
     text-align: center;
-    background-color: #8576FF;    
+    background-color: var(--purple);    
 }
 
 .middlebox {
@@ -88,9 +96,10 @@ p {
     justify-content: center;
     width: 920px;
     padding: 10px;
+    padding-bottom: 20px;
     margin: 5px;
     align-items: center;
-    background-color: rgb(22, 121, 171);
+    background-color: var(--midblue);
     
 }
 
@@ -106,45 +115,46 @@ p {
     
 }
 
-/* Add a black background color to the top navigation */
+/* background color */
 .topnav {
     width: 900px;
     display: flex;
-    background-color: #1C1678;
+    background-color: var(--darkblue);
     overflow: hidden;
     align-items: center;
     flex-direction: row;
     justify-content: center;
   }
   
-  /* Style the links inside the navigation bar */
+  /* links */
   .topnav a {
-    color: #7BC9FF;
+    color: var(--lightblue);
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 20px;
     text-decoration: none;
     font-size: 17px;
   }
   
-  /* Change the color of links on hover */
+  /* change color when hovered over */
   .topnav a:hover {
-    background-color: #8576FF;
+    background-color: var(--purple);
     color: black;
   }
   
-  /* Add a color to the active/current link */
+  /* add color to current link */
   .topnav a.active {
-    background-color: #7BC9FF;
-    color: white;
+    background-color: var(--teal);
+    color: var(--darkblue);
   }
 
+  /* button for navigating sections */
   .item_button {
-    color:#7BC9FF;
+    color:var(--lightblue);
     font-family: "Comic Sans MS";
     font-size: 17px;
     width: 230px;
     height: 40px;
-    background-color:#1C1678;
+    background-color:var(--darkblue);
     text-align: center;
     padding: 0;
     margin: 5px;
@@ -152,12 +162,15 @@ p {
 
   }
 
+  /* change color upon being hovered over.*/
   .item_button:hover {
-    background-color: #7BC9FF;
+    background-color: var(--purple);
     color: black;    
   }
 
+  /* image with a dark blue border */
   .bordered_image {
-    border: 10px solid #1C1678;
-    align-self: center;    
+    border: 10px solid var(--darkblue);
+    align-self: center;
+    height: 400px;
   }

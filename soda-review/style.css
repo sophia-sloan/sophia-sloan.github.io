@@ -1,6 +1,8 @@
 body {
     background-image: url("images/shelf.jpg");
     font-family: "Comic Sans MS";
+    color: #1C1678;
+    
     background-color: rgb(136, 135, 185);
 }
 
@@ -12,20 +14,63 @@ h2 {
     font-size: 23px;
 }
 
+h3 {
+    margin: 0px;
+}
+
+p {
+    margin: 30px;
+    text-align: left;
+    font-size: 18px;
+}
+
 #container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    margin: 100px;
+    position: sticky;
     }
 
-.box {
-    width: 900px;
+/* boxes for individual items */
+.item_box {
     margin: 10px;
+    padding: 10px;
+    background-color: #1C1678;
+    width: 240px;
+    height: 270px;
+    text-align: center;
+    color:#7BC9FF;
+
+}
+
+/*main box for the text body, along with items to be viewed*/
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 900px;
     text-align: center;
     background-color: rgb(93, 235, 215);
     
+}
+
+.section_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 900px;
+    margin: 10px;
+    text-align: center;
+    background-color: rgb(93, 235, 215);    
+}
+
+.header_box {
+    width: 900px;
+    margin: 10px;
+    text-align: center;
+    background-color: #8576FF;    
 }
 
 .middlebox {
@@ -44,15 +89,13 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 1000px;
+    width: 950px;
     padding: 10px;
     margin: 5px;
     align-items: center;
     background-color: white;
     
 }
-
-
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -67,7 +110,6 @@ h2 {
   
   /* Style the links inside the navigation bar */
   .topnav a {
-    float: left;
     color: #7BC9FF;
     text-align: center;
     padding: 14px 16px;

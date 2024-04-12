@@ -65,7 +65,7 @@ p {
 .box {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     width: 900px;
     text-align: center;
     background-color: var(--teal);
@@ -153,7 +153,7 @@ p {
     font-family: "Comic Sans MS";
     font-size: 17px;
     width: 230px;
-    height: 40px;
+    height: 50px;
     background-color:var(--darkblue);
     text-align: center;
     padding: 0;

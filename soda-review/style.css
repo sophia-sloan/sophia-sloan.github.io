@@ -6,6 +6,11 @@ body {
     background-color: rgb(136, 135, 185);
 }
 
+img {
+    border: 10px solid #1C1678;
+    align-self: center;
+  }
+
 h1 {
     font-size: 30px;
 }
@@ -14,12 +19,11 @@ h2 {
     font-size: 23px;
 }
 
-h3 {
-    margin: 0px;
-}
-
 p {
-    margin: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 5px;
+    margin-bottom:5px;
     text-align: left;
     font-size: 18px;
 }
@@ -35,11 +39,20 @@ p {
 
 /* boxes for individual items */
 .item_box {
+    border-width:10px;
+    border-style:solid;
+    border-color: #1C1678;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     margin: 10px;
     padding: 10px;
-    background-color: #1C1678;
+    background-color: #8576FF;
     width: 240px;
-    height: 270px;
+    height: 300px;
     text-align: center;
     color:#7BC9FF;
 
@@ -53,7 +66,7 @@ p {
     width: 900px;
     text-align: center;
     background-color: rgb(93, 235, 215);
-    
+    padding-bottom: 15px;
 }
 
 .section_box {
@@ -63,7 +76,8 @@ p {
     width: 900px;
     margin: 10px;
     text-align: center;
-    background-color: rgb(93, 235, 215);    
+    background-color: rgb(93, 235, 215);
+    padding-bottom: 30px; 
 }
 
 .header_box {
@@ -127,4 +141,23 @@ p {
   .topnav a.active {
     background-color: #7BC9FF;
     color: white;
+  }
+
+  .item_button {
+    color:#7BC9FF;
+    font-family: "Comic Sans MS";
+    font-size: 15px;
+    width: 230px;
+    height: 40px;
+    background-color:#1C1678;
+    text-align: center;
+    padding: 0;
+    margin: 5px;
+    border: none;
+
+  }
+
+  .item_button:hover {
+    background-color: #7BC9FF;
+    color: black;    
   }

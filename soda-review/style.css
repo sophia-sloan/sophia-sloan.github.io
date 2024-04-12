@@ -6,11 +6,6 @@ body {
     background-color: rgb(136, 135, 185);
 }
 
-img {
-    border: 10px solid #1C1678;
-    align-self: center;
-  }
-
 h1 {
     font-size: 30px;
 }
@@ -160,4 +155,9 @@ p {
   .item_button:hover {
     background-color: #7BC9FF;
     color: black;    
+  }
+
+  .bordered_image {
+    border: 10px solid #1C1678;
+    align-self: center;    
   }

@@ -22,12 +22,6 @@ h2 {
     font-size: 23px;
 }
 
-h3 {
-    margin-left: 50px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-}
-
 ul {
     margin-left: 65px;
 }
@@ -90,7 +84,7 @@ p {
     margin: 0px;
     text-align: center;
     background-color: var(--teal);
-    padding-bottom: 0px; 
+    padding-bottom: 15px; 
 }
 
 .sitemap_box {

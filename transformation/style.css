@@ -1,0 +1,15 @@
+:root {
+    --teal: rgb(93, 235, 215);
+    --purple: #8576FF;
+    --lightblue: #7BC9FF;
+    --darkblue: #1C1678;
+    --midblue: rgb(22, 121, 171);
+  }
+
+body {
+    background-image: url("images/shelf.jpg");
+    font-family: "Comic Sans MS";
+    color: var(--darkblue);
+    
+    background-color: var(--purple);
+}

@@ -1,0 +1,30 @@
+body {
+    font-family: "Comic Sans MS";
+    background-color: rgb(136, 135, 185);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: rgb(136, 135, 185);
+    }
+
+.box {
+    width: 700px;
+    margin: auto;
+    text-align: center;
+    background-color: rgb(172, 201, 191);
+    
+}
+
+.biggerbox {
+    width: 1000px;
+    margin: 5px;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(164, 164, 211);
+    
+}

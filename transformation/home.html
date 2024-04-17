@@ -2,7 +2,104 @@
 <html>
 <body>
 
+    <link rel="stylesheet" href="style.css">
 
+    <div id="container">
+        <div id="home_box">
+            <h1>WELCOME TO GOLDSHIRE</h1>
+
+            <audio controls loop>
+                <source src="https://dl.vgmdownloads.com/soundtracks/world-of-warcraft-soundtrack/kggwikaisj/14.%20Elwynn%20Forest.mp3" />
+              </audio>
+
+            <img src="image/WoWScrnShot_041624_230138.jpg" alt="in game screenshot of Goldshire from World of Warcraft"width="500">
+
+            <p align="center">Nestled within the boughs of Elwynn Forest, Goldshire serves as a safe place of respites for those who brave the roads of the southern Eastern Kingdoms. This modest town attracts both adventurers and merchants, the comforts of the infamous Lion's Pride Inn serving as the primary attraction for travelers. To the northwest lies the city of Stormwind, whose knights keep the peace and protect the residents from any of the forest's threats.</p>
+            <h2>Select a place in town to visit:</h2>
+
+            <div class="topnav">
+                <button onclick="displayLocation('inn')">Lion's Pride Inn</button>
+                <button onclick="displayLocation('blacksmith')">Blacksmith</button>
+                <button onclick="displayLocation('stablemaster')">Stablemaster</button>
+                <button onclick="displayLocation('pond')">Pond</button>
+                <button onclick="displayLocation('mailbox')">Mailbox</button>
+            </div>
+        </div>
+
+        <div class="bigger_box" id="inn">
+            <h1>LION'S PRIDE INN</h1>
+            <img src="image/WoWScrnShot_041624_230308.jpg" alt="in game screenshot of the inside of Lion's Pride Inn from World of Warcraft" width="500">
+
+            <p align="center">Despite the inviting hearth and a stocked bar, the Lion's Pride Inn seems to be distinctly empty at this time in the evening. You hear some small, occasional chatter, but it does not catch your interest. Upstairs there are several inn rooms and the cellar is staff-only.</p>
+
+            <div class="topnav">
+                <button onclick="displayLocation('inn')">RETURN</button>
+            </div>
+        </div>
+
+        <div class="bigger_box" id="blacksmith">
+            <h1>BLACKSMITH</h1>
+
+            <img src="image/WoWScrnShot_041624_230219.jpg" alt="in game screenshot of the inside of a blacksmith from World of Warcraft" width="500">
+
+           <p align="center">As you enter the small forge, you immediately begin to perspire. It is significantly hotter in here, but none of the other occupants seem to pay it any mind. An old man greets you as you enter, and as you take a brief look through his wares you realize they are much too expensive for you.</p>
+
+            <div class="topnav">
+                <button onclick="displayLocation('blacksmith')">RETURN</button>
+            </div>            
+        </div>
+
+        <div class="bigger_box" id="stablemaster">
+            <h1>STABLEMASTER</h1>
+
+            <img src="image/WoWScrnShot_041624_230153.jpg" alt="in game screenshot of a blonde stablemaster with two horses hitched beside her in World of Warcraft"width="500">
+
+            <p align="center">The stablemaster greets you warmly, but seems somewhat confused as you approach her. You did not come here on a horse that needed to be stabled for the evening.</p>
+
+            <div class="topnav">
+                <button onclick="displayLocation('stablemaster')">RETURN</button>
+            </div>     
+        </div>
+
+        <div class="bigger_box" id="pond">
+            <h1>POND</h1>
+
+            <img src="image/WoWScrnShot_041624_230237.jpg" alt="in game screenshot of a pond in World of Warcraft" width="500">
+
+            <p align="center">Tucked behind the blacksmith's guild, this assuming pond seems to avoid the notice of the guardsmen. Upon closer inspection, you make out the glitter of plate and the seal of Stormwind--a silhoutte of a blue lion--underneath the waters.</p>
+
+            <div class="topnav">
+                <button onclick="displayLocation('pond')">RETURN</button>
+            </div>     
+        </div>
+
+        <div class="bigger_box" id="mailbox">
+            <h1>MAILBOX</h1>
+
+            <img src="image/WoWScrnShot_041624_230259.jpg" alt="in game screenshot of a mailbox outside of an inn in World of Warcraft" width="500">
+
+            <p align="center">Upon inspecting the mailbox beside the entrance to the inn, you do not find any letters. None that are for you, at least.</p>
+
+            <div class="topnav">
+                <button onclick="displayLocation('mailbox')">RETURN</button>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+function displayLocation(name) {
+  var x = document.getElementById("home_box");
+  var y = document.getElementById(name);
+  if (y.style.display === "none" || y.style.display === "") {
+    x.style.display = "none";
+    y.style.display = "flex";
+  } else {
+    x.style.display = "flex";
+    y.style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>

@@ -17,7 +17,7 @@
 <body>
 
   
-  <div class="d-flex justify-content-center bg-light">
+  <div class="d-flex justify-content-center bg-light" style="padding-top: 10px;">
     <h1>Lawn Chatroom</h1>       
   </div>
   <div class="collapse show" id="intro">
@@ -36,8 +36,9 @@
   <div class="w-100 h-100" id="intro_main" style="display: none;">
     <div class="d-flex fixed-bottom flex-column align-items-center bg-light text-dark">
       <p></p>
-      <div class="text-dark">
+      <div class="w-100 d-flex justify-content-between text-dark" style="padding-bottom: 10px;">
         <input class="form-control form-control-lg" type="text" placeholder="Enter a message?">
+        <button class="btn btn-dark" onclick="toggleroom();" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="intro">Enter</a>
       </div>
       
     </div>

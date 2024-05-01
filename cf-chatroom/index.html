@@ -20,23 +20,35 @@
   <div class="d-flex justify-content-center bg-light">
     <h1>Lawn Chatroom</h1>       
   </div>
-  <div class="collapse show" div id="intro">
+  <div class="collapse show" id="intro">
     <div class="d-flex flex-column align-items-center bg-dark text-light " div id="lol">
       <p></p>
       <div class="p-2">When accessing this page, please be <b>beholden</b> to the following <b>instructions</b>:</div>
-      <div class="p-2"><b>I.</b> Stand in a <b>circle</b> with the <b>group</b>.</div>
-      <div class="p-2"><b>II.</b> Refrain from any other form of <b>communication</b> with the <b>group</b>, save for through this page.</div>
+      <div class="p-2"><b>I.</b> <b>Stand</b> in a <b>circle</b> with the <b>group</b>.</div>
+      <div class="p-2"><b>II.</b> <b>Refrain</b> from any other form of <b>communication</b> with the <b>group</b>, save for through this page.</div>
       
       <div class="p-2">
-      <a class="btn btn-light" data-toggle="collapse" href="#intro" role="button" aria-expanded="false" aria-controls="intro">I understand.</a>
+      <button class="btn btn-light" onclick="toggleroom();" data-toggle="collapse" href="#intro" role="button" aria-expanded="false" aria-controls="intro">I understand.</a>
       </div>
     </div>
-    </div>
-
-
-  <div id="intro_main" class="collapse">
-    This div (Foo) is hidden by default
   </div>
+
+  <div class="w-100 h-100" id="intro_main" style="display: none;">
+    <div class="d-flex fixed-bottom flex-column align-items-center bg-light text-dark">
+      <p></p>
+      <div class="text-dark">
+        <input class="form-control form-control-lg" type="text" placeholder="Enter a message?">
+      </div>
+      
+    </div>
+    
+  </div>
+
+<script>
+function toggleroom() {
+  document.getElementById("intro_main").style.display = "block";
+}
+</script>
 
 </body>
 </html>

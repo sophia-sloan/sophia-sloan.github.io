@@ -16,8 +16,6 @@
 </head>
 
 <body>
-
-  
   <div class="d-flex justify-content-center bg-light" style="padding-top: 10px;">
     <h1>Lawn Chatroom</h1>       
   </div>
@@ -35,53 +33,62 @@
     </div>
   </div>
 
-
-
   <div class="w-100 h-100" id="intro_main" style="display: none;">
-    <div id="sent" class="d-flex flex-column w-100 align-items-center justify-content-center overflow-auto" style="max-height: 20%; word-break: break-all; padding-top: 30px; padding-bottom: 0px;">
-  
+    <div id="sent" class="d-flex flex-column w-100 align-items-center justify-content-start overflow-auto" style="max-height: 85vh; word-break: break-all; padding-top: 15px; padding-bottom: 15px;">
     </div>  
 
     <div class="d-flex fixed-bottom flex-column align-items-center">
       <p></p>
-    
       <div class="w-100 d-flex justify-content-between bg-light text-dark" style="padding-bottom: 10px; padding-top: 10px">
         <input id="input" class="form-control form-control-lg" type="text" placeholder="Enter a message?">
         <button class="btn btn-dark" onclick="getmessage('input');" input type="reset" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="intro">Enter</a>
       
         </div>
-
     </div>
     
   </div>
 
 <script>
+// toggles the chatroom and sets a timer for... something...  
 function toggleroom() {
   document.getElementById("intro_main").style.display = "block";
+  setTimeout(Hi, 60000);
 }
 
+// gets message from the form and clears it
 function getmessage(id) {
   message = document.getElementById(id).value;
   if (message.length > 0) {
     console.log(message);
-    displaymessage(message);
+    displaymessage("You\n", message);
 
     
   }
   document.getElementById(id).value = "";
 }
 
-function displaymessage(message) {
+// displays messages with associated name
+function displaymessage(name, message) {
     block = document.createElement('p');
     block.classList.add('bg-light');
     block.classList.add('p-2');
     
     block.style.width = '85%';
-    let top = "You\n";
-    block.innerText = top.concat(message);
+    block.innerText = name.concat(message);
     document.getElementById('sent').appendChild(block);
-}
-</script>
 
+    // update bar
+    var channel = document.getElementById("sent");
+    channel.lastChild.scrollIntoView({ behavior: 'smooth' });
+}
+
+// say hi...
+function Hi() {
+  message = "hi... you can talk to other people :-) i guess";
+  name = "Sophia\n";
+  displaymessage(name, message);
+}
+
+</script>
 </body>
 </html>

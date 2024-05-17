@@ -44,6 +44,8 @@ function elizaStep() {
 		}
 		elizaLines = temp.reverse();
 		f.e_display.value = elizaLines.join('\n');
+		placeRandomly(usr);
+		placeRandomly(rpl);
 	}
 	else if (elizaLines.length == 0) {
 		// no input and no saved lines -> output initial
@@ -55,25 +57,81 @@ function elizaStep() {
 	f.e_input.focus();
 }
 
+function placeRandomly(text) {
+    const textElement = document.createElement('div');
+    textElement.textContent = text;
+    textElement.style.position = 'fixed';
+
+    const randomX = Math.random() * window.innerWidth;
+    const randomY = Math.random() * window.innerHeight;
+    textElement.style.left = randomX + 'px';
+    textElement.style.top = randomY + 'px';
+
+    const randomRotation = Math.random() * 360;
+    textElement.style.transform = `rotate(${randomRotation}deg)`;
+	textElement.style.color = "#444444";
+    document.body.appendChild(textElement);
+}
+
+
 //-->
 </SCRIPT>
+
+<style>
+	body {
+		background-color: rgb(68, 68, 68);
+	}
+</style>
 </HEAD>
+<BODY>
+<div>
+		<div id = "intro" style="margin: 30px; font-family: monospace; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+			<div style="padding: 10px; min-width: 1000px; background-color: white;">
+				<H1 style="font-size:25px; text-align: center; font-family: monospace;">ELIZA</H1>
+			</div>
+			<div style="padding: 10px; min-width: 1000px; background-color: white; text-align: center;">
+				<p>This iteration of ELIZA can be a little bit mean, but she only has good intentions in helping you process what's on your mind!</p><p>That being said, don't take what she has to say too personally.</p>
+			</div>
+			<div style="padding: 10px; min-width: 1000px; background-color: white; text-align: center;">
+				<button onclick="display_main()">Understood</button> 
+			</div>
+		</div>
 
-<BODY TOPMARGIN="0" LEFTMARGIN="0" RIGHTMARGIN="0" BOTTOMMARGIN="0" MARGINHEIGHT="0" MARGINWIDTH="0" STYLE="border:0" onload="window.setTimeout('elizaReset()',100)"><A NAME="top"></A>
+		<div id = "main" style="margin: 30px; font-family: monospace; display: none; flex-direction: column; justify-content: center; align-items: center;">
+			<div style="padding: 10px; min-width: 1000px; background-color: white;">
+			<H1 style="font-size:25px; text-align: center; font-family: monospace;">ELIZA</H1>
+			</div>
+			<div style="padding: 10px; min-width: 1000px; background-color: white; text-align: center;">
+			<div><A HREF="conversation.html"><strong>GPT Discussion</strong></A></div>
+			</div>
+			<div style="padding: 10px; min-width: 1000px; background-color: white; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+				<TABLE BORDER="0" CELLSPACING="10" CELLPADDING="0">
+				<FORM NAME="e_form" onsubmit="elizaStep();return false">
+				<TR><TD COLSPAN="2"><TEXTAREA NAME="e_display" COLS="60" ROWS="20"></TEXTAREA></TD></TR>
+				<TR VALIGN="middle">
+					<TD><INPUT TYPE="text" NAME="e_input" SIZE="50"></TD>
+					<TD ALIGN="right"><INPUT TYPE="submit" VALUE="&nbsp;Talk&nbsp;"> <INPUT TYPE="reset" VALUE="Reset" onClick="window.setTimeout('elizaReset()',100)"></TD>
+				</TR>
+				</FORM>
+				</TABLE>
+			</div>		
+		</div>
+	</div>
+</div>
 
-<CENTER>
-<P>&nbsp;</P>
-<H3>Eliza</H3>
-<TABLE BORDER="0" CELLSPACING="10" CELLPADDING="0">
-<FORM NAME="e_form" onsubmit="elizaStep();return false">
-<TR><TD COLSPAN="2"><TEXTAREA NAME="e_display" COLS="60" ROWS="20"></TEXTAREA></TD></TR>
-<TR VALIGN="middle">
-	<TD><INPUT TYPE="text" NAME="e_input" SIZE="50"></TD>
-	<TD ALIGN="right"><INPUT TYPE="submit" VALUE="&nbsp;Talk&nbsp;"> <INPUT TYPE="reset" VALUE="Reset" onClick="window.setTimeout('elizaReset()',100)"></TD>
-</TR>
-</FORM>
-</TABLE>
-</CENTER>
 
+<script>
+	function display_main() {
+	  var y = document.getElementById("main");
+	  var x = document.getElementById("intro");
+	  if (y.style.display === "none" || y.style.display === "") {
+		x.style.display = "none";
+		y.style.display = "flex";
+	  } else {
+		x.style.display = "flex";
+		y.style.display = "none";
+	  }
+	}
+	</script>
 </BODY>
 </HTML>

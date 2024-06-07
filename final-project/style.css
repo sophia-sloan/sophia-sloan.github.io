@@ -104,10 +104,12 @@ p {
     border-radius: 10px;
     border-color: var(--satpink);
     background-color: var(--lightpink);
+    z-index: 1;
 }
 
 .icon:hover{
-    transform:scale(1.1) rotate(3deg);
+    transform:scale(1.2) rotate(3deg);
+    z-index: 2;
 }
 
 /* BUTTONS */

@@ -23,8 +23,18 @@ function setClothingItem(clothing_type, clothing_name) {
     console.log(clothing_name);
 
     var img = document.getElementById(clothing_type);
+    var prev = img.src;
     img.src = "images/customization/".concat(clothing_name);
     
+    if (prev.localeCompare(img.src) == 0) {
+        img.src = "";
+    } else {
+        var sparkle = document.getElementById("sparkle");
+        sparkle.src = "images/sparkle.gif";
+        setTimeout(() => { sparkle.src = "images/blank.png"; }, 2000);
+    }
+
+
 }
 
 // Display all clothing of clothing_type
@@ -34,7 +44,7 @@ function displayOptions(clothing_type, names) {
     var length = names.length;
     var cur_element;
     for (i = 0; i < length; i++) {
-        if (i % 3 == 0) {
+        if (i % 2 == 0) {
             cur_element = document.createElement("div");
             cur_element.classList.add("clothes_row");
             div.appendChild(cur_element);

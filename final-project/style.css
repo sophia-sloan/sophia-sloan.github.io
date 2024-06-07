@@ -10,6 +10,7 @@
 body {
     color: var(--darkmagenta);
     font-family: 'Spectral';
+    cursor: url('images/cursor.png'), auto;
 }
 
 h1 {
@@ -95,16 +96,17 @@ p {
     flex-direction: row;
     width: 90%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
 }
 
 .icon {
-    height: 110px;
+    height: 159px;
     border-style: solid;
     border-radius: 10px;
     border-color: var(--satpink);
     background-color: var(--lightpink);
     z-index: 1;
+    margin-right: 30px;
 }
 
 .icon:hover{
@@ -115,7 +117,7 @@ p {
 /* BUTTONS */
 /* background color */
 .topnav {
-
+    
     width: 100%;
     display: flex;
     overflow: hidden;
@@ -127,6 +129,7 @@ p {
   
   /* links */
   .topnav button {
+    cursor: url('images/cursor.png'), auto;
     color: var(--darkmagenta);
     font-family: 'Spectral';
     background-color: var(--midpink);

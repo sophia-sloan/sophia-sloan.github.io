@@ -61,9 +61,10 @@ function download() {
         }
     }
 
-    let link = document.getElementById("download");
+    let link = document.createElement('a');
     console.log("ugh");
     link.download = 'doll.png';
     link.href = document.getElementById('mycanvas').toDataURL();
     link.click();
+    document.getElementById("very_bottom").appendChild(link);
 }
